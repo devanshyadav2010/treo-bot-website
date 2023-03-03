@@ -63,7 +63,7 @@ Vote Astra</a>
               <div>
                 <div className="text-white">
                   <p className="text-xl font-semibold mt-5"><i className={`fa fa-universal-access text-2xl text-amber-500`} /> Universal</p>
-                  <p className="text-gray-500 line-clamp-4">Treo is a multipurpose bot for your discord server with Moderation, Fun, Giveaway, Economy, Utility etc... features.)</p>
+                  <p className="text-gray-500 line-clamp-4">(Treo is a multipurpose bot for your discord server with Moderation, Fun, Giveaway, Economy, Utility etc... features.)</p>
                 </div>
               </div>
               <div>
