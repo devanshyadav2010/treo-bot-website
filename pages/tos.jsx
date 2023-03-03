@@ -18,9 +18,9 @@ Through Inviting the bot may it collect specific data as described in its Policy
 <div className="py-3"></div>
   <h2 className="mt-4 text-white font-bold text-3xl">Liability</h2>
 <p>⊳ The owner of the bot may not be made liable for individuals breaking these Terms at any given time. He has faith in the end users being truthfully about their information and not misusing this bot or The Services of Discord Inc in a malicious way.
-
 We reserve the right to update these terms at our own discretion, giving you a 1-Week (7 days) period to opt out of these terms if you're not agreeing with the new changes. You may opt out by Removing the bot from any Server you have the rights for.</p>
 <div className="py-3"></div>
+  <h2 className="mt-4 text-white font-bold text-3xl">Contact</h2>
 <p>⊳ While using the bot, you cannot use it in a way that harms other users for troll purposes.</p>
 <div className="py-3"></div>
 <p>⊳ To use certain discord bot commands, you need to vote for the <a className="text-white" href="https://top.gg/bot/924325576095973426/vote">Astra</a> bot at certain intervals.</p>
