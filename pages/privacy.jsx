@@ -13,7 +13,12 @@ Providing the command handling of the bot
 Feature usage
 No usage of data outside the aforementioned cases will happen and under no circumstances will the data be shared with third parties</p>
         <div className="py-3"></div>
-        <p>⊳ You have to vote for the <a className="text-white" href="https://top.gg/bot/924325576095973426/vote">Astra</a> bot when using certain commands from the bot commands.</p>
+    <h2 className="font-semibold text-3xl text-white/75">Stored Information</h2>
+        <p>⊳ The bot may store the following information upon a User using Certain Commands:
+
+-Their Database is stored within mongodb and kept privately in my files
+
+No other information outside the above-mentioned one will be stored AUTOMATICALLY.</p>
         <div className="py-3"></div>
         <p>⊳ Every user can use the astra bot however they want, as long as they do not intend to harm.</p>
         <div className="py-3"></div>
