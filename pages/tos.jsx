@@ -10,7 +10,8 @@ You acknowledge that you have the privilege to use the bot freely on any Discord
 
 Through Inviting the bot may it collect specific data as described in its Policy. The intended usage of this data is for core functionalities of the bot such as command handling, guild-specific settings and the Welcoming System..</p>
 <div className="py-3"></div>
-<p>⊳ You cannot use bot commands to harm the bot.</p>
+  <h2 className="mt-4 text-white font-bold text-3xl">Intended Age</h2>
+<p>⊳The bot may not be used by individuals under the minimal age described in Discord's Terms of Service</p>
 <div className="py-3"></div>
 <p>⊳ You may not use open source codes to harm other servers.</p>
 <div className="py-3"></div>
