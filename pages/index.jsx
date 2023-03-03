@@ -48,7 +48,7 @@ Vote Astra</a>
             <p className="text-white text-4xl font-bold" dangerouslySetInnerHTML={{ __html:"Astra Bot" }} />
             <p className="text-white text-md font-medium text-gray-500/75" dangerouslySetInnerHTML={{ __html: "How about creating the best environment to relax yourself with your own emotions?" }}/>
             <a href="https://discord.com/oauth2/authorize?client_id=1016392200516550736&permissions=2146958591&scope=bot%20applications.commands" className={"mt-10 flex items-center px-4 justify-center gap-x-2 shadow-lg shadow-amber-600/20 cursor-pointer rounded-xl py-4 font-medium bg-gradient-to-r from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white"}>
-              <i className="fab fa-discord mr-2" />Invite Astra
+              <i className="fab fa-discord mr-2" />Invite Treo
             </a>
           </div>
 
