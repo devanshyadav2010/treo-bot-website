@@ -26,7 +26,6 @@ No other information outside the above-mentioned one will be stored AUTOMATICALL
 No other actions may update the stored information at any given time.</p>
         <div className="py-3"></div>
     <h2 className="font-semibold text-3xl text-white/75">Removal Of Data</h2>
-    <br>
         <h3 className="font-semibold text-3xl text-white/75">Automatic Removal</h3>
         <p>⊳ Stored Data can be removed automatically through means of removing the bot from a Server. This can be achieved by either kicking or banning the bot from the server. Re-inviting the bot will add the same default values, as mentioned above, back to the bot's' database..</p>   
         <div className="py-3"></div>
