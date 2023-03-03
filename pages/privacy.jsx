@@ -36,6 +36,5 @@ No other actions may update the stored information at any given time.</p>
     
         </div>
             </div>
-    
     );
 };
