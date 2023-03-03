@@ -6,7 +6,12 @@ export default function Privacy() {
             <p className="text-sm text-white/30 mb-4">Last Update: 20/05/2022  🆕️</p>
   <div className="animateHeader text-white text-opacity-40 mt-5">
         <h2 className="font-semibold text-3xl text-white/75">Usage Of Data</h2>
-        <p>⊳ To use the Astra bot, you must define the necessary permissions when adding it to your discord server. <a className="text-white">(READ MESSAGES, SEND MESSAGES, EMBED LINKS, ATTACH FILES, READ MESSAGE HISTORY, CONNECT, SPEAK, USE VOICE ACTIVITY, PRIORITY SPEAKER)</a></p>
+        <p>⊳ The bot may use stored data for different purposes, including but not limited to:
+
+Storing the guild-specific settings of the bot (Corresponding commands)
+Providing the command handling of the bot
+Feature usage
+No usage of data outside the aforementioned cases will happen and under no circumstances will the data be shared with third parties</p>
         <div className="py-3"></div>
         <p>⊳ You have to vote for the <a className="text-white" href="https://top.gg/bot/924325576095973426/vote">Astra</a> bot when using certain commands from the bot commands.</p>
         <div className="py-3"></div>
