@@ -13,7 +13,8 @@ Through Inviting the bot may it collect specific data as described in its Policy
   <h2 className="mt-4 text-white font-bold text-3xl">Intended Age</h2>
 <p>⊳The bot may not be used by individuals under the minimal age described in Discord's Terms of Service</p>
 <div className="py-3"></div>
-<p>⊳ You may not use open source codes to harm other servers.</p>
+  <h2 className="mt-4 text-white font-bold text-3xl">Affilation</h2>
+<p>⊳ The Bot is not affiliated with, supported or made by Discord Inc. Any direct connection to Discord or any of its Trademark objects is purely coincidental. We do not claim to have the copyright ownership of Discord's assets, trademarks or other intellectual property.</p>
 <div className="py-3"></div>
 <p>⊳ You may not sell or market open source codes through other platforms.</p>
 <div className="py-3"></div>
