@@ -10,7 +10,7 @@ export default function Index() {
       <img width="500" src="/img/bck.png" />
       </div>
         <p className="animateHeader text-4xl font-extrabold text-center text-white">
-          Astra Bot
+          Treo
         </p>
         <p className="animateHeader text-white text-opacity-50 text-center mt-5">
       Treo is a multipurpose bot for your discord server with Moderation, Fun, Giveaway, Economy, Utility etc... features. 
