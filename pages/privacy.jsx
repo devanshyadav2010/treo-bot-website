@@ -20,9 +20,15 @@ No usage of data outside the aforementioned cases will happen and under no circu
 
 No other information outside the above-mentioned one will be stored AUTOMATICALLY.</p>
         <div className="py-3"></div>
-        <p>⊳ Every user can use the astra bot however they want, as long as they do not intend to harm.</p>
+    <h2 className="font-semibold text-3xl text-white/75">Updating Data</h2>
+        <p>⊳ The data may be updated when using specific commands. Updating data will require the input of an end user, and data that can be seen as sensitive, such as content of a message, may need to be stored when using certain commands.
+
+No other actions may update the stored information at any given time.</p>
         <div className="py-3"></div>
-        <p>⊳ You cannot use certain commands at the same time while using Astra.</p>   
+    <h2 className="font-semibold text-3xl text-white/75">Removal Of Data</h2>
+    <br>
+        <h3 className="font-semibold text-3xl text-white/75">Automatic removal</h3>
+        <p>⊳ Stored Data can be removed automatically through means of removing the bot from a Server. This can be achieved by either kicking or banning the bot from the server. Re-inviting the bot will add the same default values, as mentioned above, back to the bot's' database..</p>   
         <div className="py-3"></div>
         <p>⊳ Astra bot does not save any data based on users.</p>
         <div className="py-3"></div>
