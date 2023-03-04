@@ -1,4 +1,4 @@
-export default function Maintainance() {
+export default function maintainance() {
 
     return (
         <div>
