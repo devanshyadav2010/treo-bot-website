@@ -1,5 +1,6 @@
 export default function Invite() {
 
-   window.location.href = "http://www.w3schools.com";
-      
+  function Invite() {
+  location.replace("https://www.w3schools.com")
+}
 };
