@@ -1,3 +1,4 @@
-function Invite() {
-  redirect("https://www.w3schools.com")
+export default function Invite() {
+  window.location.replace("http://www.w3schools.com");
+
 };
