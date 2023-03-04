@@ -1,6 +1,5 @@
 export default function Invite() {
 
-   function Redirect() {
-         window.location.replace("https://treoinv.tk");
+   window.location.href = "http://www.w3schools.com";
       }
 };
