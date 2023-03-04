@@ -1,8 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 
-const RedirectPage = () => {
+export default function invite {
   return <Redirect to="https://treo.vercel.app/" />;
 };
 
-export default RedirectPage;
+
