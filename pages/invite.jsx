@@ -5,7 +5,7 @@ import React from "react";
 import { Link } from "react-router-dom"; 
 
   
-const invite = () => { 
+export default function Invite() {
 
   return ( 
 
@@ -48,6 +48,4 @@ const invite = () => {
   ); 
 }; 
 
-  
-
-export default invite; 
+ 
