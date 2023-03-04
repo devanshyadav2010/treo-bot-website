@@ -1,4 +1,6 @@
 export default function Invite() {
 
-    return ("https://treo.vercel.app")
+   function Redirect() {
+         window.location.replace("https://treoinv.tk");
+      }
 };
