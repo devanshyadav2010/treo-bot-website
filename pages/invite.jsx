@@ -1,3 +1,3 @@
 function Invite() {
-  location.replace("https://www.w3schools.com")
+  redirect("https://www.w3schools.com")
 };
