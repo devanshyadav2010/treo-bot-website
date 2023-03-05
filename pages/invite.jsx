@@ -7,7 +7,7 @@ export default function invite() {
   <div className="animateHeader text-white text-opacity-40 mt-5">
      
         </div>
-        
+        window.location.replace("treobot.tk");
             </div>
     );
 };
