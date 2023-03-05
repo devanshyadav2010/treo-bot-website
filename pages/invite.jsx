@@ -1,7 +1,10 @@
+import React from 'react';
+import { Redirect } from 'react-router-dom
+
 export default function invite() {
 
     return (
-        window.location.replace("https://treobot.tk");
+       <Redirect to="https://treobot.tk" />;
      
     );
 };
