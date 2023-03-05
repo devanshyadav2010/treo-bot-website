@@ -1,4 +1,4 @@
 # Website
 ### [treobot.tk](https://treobot.tk)
 # License
-## [MIT License](LICENCE)
+## [MIT License](LICENSE)
