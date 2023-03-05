@@ -1,10 +1,8 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom
+import { Redirect } from 'react-router-dom';
 
-export default function invite() {
-
-    return (
-       <Redirect to="https://treobot.tk" />;
-     
-    );
+const invite = () => {
+  return <Redirect to="https://treo.vercel.app/partners" />;
 };
+
+export default invite;
