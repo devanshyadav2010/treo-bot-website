@@ -1,4 +1,4 @@
-export default function Privacy() {
+export default function maintainance() {
 
     return (
         <div>
