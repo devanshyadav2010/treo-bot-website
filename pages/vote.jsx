@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-export default function support() {
+export default function vote() {
   const router = useRouter();
 
   return null;
