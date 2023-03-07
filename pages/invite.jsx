@@ -7,7 +7,7 @@ export default function invite() {
 }
 
 export async function getServerSideProps({ res }) {
-  res.writeHead(302, { Location: 'https://top.gg' });
+  res.writeHead(302, { Location: 'https://top.gg/' });
   res.end();
 
   return {
