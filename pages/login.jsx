@@ -1,3 +1,3 @@
-import LoginRedirect from '../components/LoginRedirect'
+import LoginRedirect from './LoginRedirect'
 
 export default LoginRedirect
