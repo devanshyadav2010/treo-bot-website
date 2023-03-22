@@ -4,17 +4,17 @@ const teamMembers = [
   {
     name: 'John Doe',
     role: 'Owner',
-    avatarUrl: 'https://example.com/avatar1.png',
+    avatarUrl: 'https://images-ext-1.discordapp.net/external/ZVEvKf45XxQctxcaiYCfWFGzgI6W8yXdrKAhS5I9uk4/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/980069165459198022/283716454cf02f9c2083375779b730af.png',
   },
   {
     name: 'Jane Doe',
     role: 'Developer',
-    avatarUrl: 'https://example.com/avatar2.png',
+    avatarUrl: 'https://images-ext-1.discordapp.net/external/ZVEvKf45XxQctxcaiYCfWFGzgI6W8yXdrKAhS5I9uk4/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/980069165459198022/283716454cf02f9c2083375779b730af.png',
   },
   {
     name: 'Alex Smith',
     role: 'Manager',
-    avatarUrl: 'https://example.com/avatar3.png',
+    avatarUrl: 'https://images-ext-1.discordapp.net/external/ZVEvKf45XxQctxcaiYCfWFGzgI6W8yXdrKAhS5I9uk4/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/980069165459198022/283716454cf02f9c2083375779b730af.png',
   },
 ];
 
