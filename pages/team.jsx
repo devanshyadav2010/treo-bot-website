@@ -26,7 +26,7 @@ const TeamMember = ({ name, role, avatarUrl }) => (
   </div>
 );
 
-export default function TeamPage() {
+export default function team() {
   return (
     <div>
       <h1>Meet the Team</h1>
