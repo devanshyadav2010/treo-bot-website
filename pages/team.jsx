@@ -1,17 +1,16 @@
-import swr from "../lib/swr";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Team({ $ }) {
-    const { data: _team } = swr("https://treobot.tk/team");
-    const team = _team ? _team.data : null;
-
-    return (
+export default function Index() {
+	
+  return (
         <div>
             <div className="pt-10 mx-auto flex flex-col items-center justify-center">
                 <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_bpqri9y8.json"  background="transparent"  speed="1"  style={{ width: "300px", height: "200px" }}  loop  autoplay />
                 <p className="animateHeader text-4xl font-extrabold text-white">
-                    {$.team.title}
+                    Treo Team
                 </p>
-                <p dangerouslySetInnerHTML={{ __html: $.team.description }} className="animateHeader text-white text-opacity-50 text-center mt-5">
+                <p dangerouslySetInnerHTML={{ __html: Treo developers and manager }} className="animateHeader text-white text-opacity-50 text-center mt-5">
                     
                 </p>
             </div>
