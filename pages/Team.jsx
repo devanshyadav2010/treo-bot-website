@@ -1,4 +1,4 @@
-import TreoTeam from '../components/team';
+import TreoTeam from '../components/Team';
 
 export default function Team() {
   return (
