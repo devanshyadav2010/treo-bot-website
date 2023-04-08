@@ -49,7 +49,7 @@ export default function Commands() {
       </div>
       <div className="flex flex-wrap">
         {categories.map((category) => (
-          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
+          <div key={category.name} className="md:w-1/3 md:px-2 mb-4" style={{marginRight: '10px'}}>
             <button
               className={`w-full md:w-auto h-10 shadow-md rounded-md py-1 px-1 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
