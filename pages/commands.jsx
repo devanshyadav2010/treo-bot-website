@@ -1,88 +1,62 @@
 import { useState } from 'react';
 
-const categories = [  {    name: "Information",    commands: [      {        name: "Help",        description: "Get help with using the bot."      },      {        name: "User",        description: "Get information about a user."      }    ]
+const categories = [
+  {
+    name: "Information",
+    commands: ["Help", "User"]
   },
   {
     name: "Economy",
-    commands: [
-      {
-        name: "Servers",
-        description: "Get information about the servers the bot is in."
-      },
-      {
-        name: "Members",
-        description: "Get information about the members in a server."
-      }
-    ]
+    commands: ["Servers", "Members"]
   },
   {
     name: "Utility",
-    commands: [
-      {
-        name: "Ping",
-        description: "Get the latency of the bot."
-      },
-      {
-        name: "Poll",
-        description: "Create a poll for members to vote on."
-      }
-    ]
+    commands: ["Ping", "Poll"]
   },
   {
     name: "Antinuke",
-    commands: [
-      {
-        name: "Ban",
-        description: "Ban a user from a server."
-      },
-      {
-        name: "Kick",
-        description: "Kick a user from a server."
-      }
-    ]
+    commands: ["Ban", "Kick"]
   },
   {
     name: "Ticket",
-    commands: [
-      {
-        name: "Open",
-        description: "Open a support ticket."
-      },
-      {
-        name: "Close",
-        description: "Close a support ticket."
-      }
-    ]
+    commands: ["Open", "Close"]
   },
   {
     name: "Welcome",
-    commands: [
-      {
-        name: "Set",
-        description: "Set the welcome message for a server."
-      },
-      {
-        name: "Reset",
-        description: "Reset the welcome message for a server."
-      }
-    ]
+    commands: ["Set", "Reset"]
   }
 ];
 
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [tableBgColor, setTableBgColor] = useState("#ffffff");
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   }
 
+  const handleColorChange = (event) => {
+    const color = event.target.value;
+    setTableBgColor(color);
+  }
+
   return (
     <div className="container mx-auto mt-10">
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">Commands</h2>
+        </div>
+        <div>
+          <label htmlFor="color-picker" className="text-sm font-medium text-gray-500 mr-2">Table Background Color:</label>
+          <input type="color" id="color-picker" onChange={handleColorChange} />
+        </div>
+      </div>
+      
       <div className="flex flex-wrap">
         {categories.map((category) => (
           <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <button
-              className={`w-full shadow-lg rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full shadow-lg rounded-lg py-3 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
@@ -93,29 +67,10 @@ export default function Commands() {
       
       <div className="flex flex-wrap mt-10">
         {selectedCategory.commands.map((command) => (
-          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <div className="border border-gray-200 rounded-lg overflow-hidden">
-              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
-              <div className="bg-white p-4">
-                <div className="font-medium mb-2">{command.name}</div>
-                <div className="text-gray-500">{command.description}</div>
-              </div>
-              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
-            </div>
-</div>
-        ))}
-      </div>
-      
-      <div className="flex flex-wrap mt-10">
-        {selectedCategory.commands.map((command) => (
-          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <div className="border border-gray-200 rounded-lg overflow-hidden">
-              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
-              <div className="bg-white p-4">
-                <div className="font-medium mb-2">{command.name}</div>
-                <div className="text-gray-500">{command.description}</div>
-              </div>
-              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
+          <div key={command} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="border border-gray-200 rounded-lg p-4 h-full" style={{ backgroundColor: tableBgColor }}>
+              <div className="font-medium mb-2">{command}</div>
+              <div className="text-gray-500">Command description goes here.</div>
             </div>
           </div>
         ))}
@@ -123,4 +78,3 @@ export default function Commands() {
     </div>
   );
 }
-
