@@ -102,15 +102,14 @@ export default function Commands() {
           </div>
         ))}
       </div>
-
-      <div className="flex flex-wrap mt-10">
+      
+      <div className="flex flex-wrap mt-10 relative">
+        <div className="absolute inset-0 border-4 border-red-400 rounded-lg animate-pulse z-0"></div>
         {selectedCategory.commands.map((command) => (
           <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <div className="border border-gray-200 rounded-lg p-4 h-full relative overflow-hidden">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 h-full relative z-10">
               <div className="font-medium mb-2">{command.name}</div>
               <div className="text-gray-500">{command.description}</div>
-
-              <div className="absolute top-0 left-0 w-full h-full border-4 border-transparent border-solid animate-border-glow"></div>
             </div>
           </div>
         ))}
