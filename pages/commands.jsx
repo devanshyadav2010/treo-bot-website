@@ -5,7 +5,6 @@ import categories from '../data/categories';
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchText, setSearchText] = useState('');
-  const [searchBarSize, setSearchBarSize] = useState(10);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -13,14 +12,6 @@ export default function Commands() {
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
-  };
-
-  const handleSearchBarFocus = () => {
-    setSearchBarSize(20);
-  };
-
-  const handleSearchBarBlur = () => {
-    setSearchBarSize(10);
   };
 
   const filteredCommands = selectedCategory.commands.filter((command) =>
@@ -39,9 +30,6 @@ export default function Commands() {
               id="search"
               value={searchText}
               onChange={handleSearchTextChange}
-              onFocus={handleSearchBarFocus}
-              onBlur={handleSearchBarBlur}
-              style={{ fontSize: searchBarSize }}
               className="focus:ring-amber-500 focus:border-amber-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
               placeholder="Search commands"
             />
@@ -51,11 +39,11 @@ export default function Commands() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap flex-col md:flex-row">
+      <div className="flex flex-wrap flex-row">
         {categories.map((category) => (
-          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
+          <div key={category.name} className="w-1/2 sm:w-1/3 lg:w-1/6 md:px-2 mb-4">
             <button
-              className={`w-full md:w-auto h-12 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full h-10 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
