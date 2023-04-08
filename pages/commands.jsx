@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 const categories = [
-  {    
+  {
     name: "Information",
     commands: [
-      {        
+      {
         name: "Help",
         description: "Get help with using the bot."
       },
-      {        
+      {
         name: "User",
         description: "Get information about a user."
       }
@@ -90,34 +90,28 @@ export default function Commands() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="flex flex-wrap flex-col md:flex-row md:justify-center">
+      <div className="flex flex-wrap flex-col md:flex-row">
         {categories.map((category) => (
-          <button
-            key={category.name}
-            className={`w-1/2 md:w-auto px-2 py-1 rounded-md text-center font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
-            onClick={() => handleCategoryClick(category)}
-          >
-            {category.name}
-          </button>
+          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
+            <button
+              className={`w-full md:w-auto h-12 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category.name}
+            </button>
+          </div>
         ))}
       </div>
-      <div className="table-container mt-8">
-        <table className="table-auto mx-auto">
-          <thead>
-            <tr>
-              <th className="px-4 py-2 text-left">Command</th>
-              <th className="px-4 py-2 text-left">Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {selectedCategory.commands.map((command) => (
-              <tr key={command.name}>
-                <td className="border px-4 py-2">{command.name}</td>
-                <td className="border px-4 py-2">{command.description}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="flex flex-wrap mt-10">
+        {selectedCategory.commands.map((command) => (
+          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="h-full bg-white shadow-md rounded-md px-4 py-6 hover:shadow-lg transition duration-200">
+              <h2 className="text-lg font-bold mb-2">{command.name}</h2>
+              <p className="text-gray-600">{command.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
