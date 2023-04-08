@@ -90,7 +90,7 @@ export default function Commands() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="flex flex-wrap flex-col md:flex-row">
+      <div className=" px-6 justify-center gap-x-2 shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white  ">
         {categories.map((category) => (
           <div key={category.name} className="w-full md:w-1/3 px-2 mb-4">
             <button
