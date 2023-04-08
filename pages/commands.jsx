@@ -1,6 +1,18 @@
 import { useState } from 'react';
 
-const categories = [  {    name: "Information",    commands: [      {        name: "Help",        description: "Get help with using the bot."      },      {        name: "User",        description: "Get information about a user."      }    ]
+const categories = [
+  {
+    name: "Information",
+    commands: [
+      {
+        name: "Help",
+        description: "Get help with using the bot."
+      },
+      {
+        name: "User",
+        description: "Get information about a user."
+      }
+    ]
   },
   {
     name: "Economy",
@@ -78,35 +90,29 @@ export default function Commands() {
 
   return (
     <div className="container mx-auto mt-10">
-      <table className="table-fixed w-full">
-        <thead>
-          <tr>
-            <th className="w-1/4 px-4 py-2">Category</th>
-            <th className="w-3/4 px-4 py-2">Commands</th>
-          </tr>
-        </thead>
-        <tbody>
-          {categories.map((category) => (
-            <tr
-              key={category.name}
-              className={`bg-gray-100 hover:bg-gray-200 ${selectedCategory.name === category.name ? 'bg-amber-600 text-white' : ''}`}
+      <div className="flex flex-wrap flex-col md:flex-row">
+        {categories.map((category) => (
+          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
+            <button
+              className={`w-full md:w-auto h-12 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
-              <td className="border px-4 py-2">{category.name}</td>
-              <td className="border px-4 py-2">
-                <ul>
-                  {category.commands.map((command) => (
-                    <li key={command.name} className="mb-2">
-                      <h2 className="text-lg font-bold mb-2">{command.name}</h2>
-                      <p className="text-gray-600">{command.description}</p>
-                    </li>
-                  ))}
-                </ul>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              {category.name}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex flex-wrap mt-10">
+        {selectedCategory.commands.map((command) => (
+          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="h-full bg-white shadow-md rounded-md px-4 py-6 hover:shadow-lg transition duration-200">
+              <h2 className="text-lg font-bold mb-2">{command.name}</h2>
+              <p className="text-gray-600">{command.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
