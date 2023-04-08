@@ -1,84 +1,100 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-const categories = [  {    name: 'Information',    commands: [      { name: 'help' },      { name: 'user' },    ],
-  },
-  {
-    name: 'Economy',
-    commands: [
-      { name: 'balance' },
-      { name: 'shop' },
-    ],
-  },
-  {
-    name: 'Utility',
-    commands: [
-      { name: 'poll' },
-      { name: 'remind' },
-    ],
-  },
-  {
-    name: 'Antinuke',
-    commands: [
-      { name: 'ban' },
-      { name: 'kick' },
-    ],
-  },
-  {
-    name: 'Ticket',
-    commands: [
-      { name: 'new' },
-      { name: 'close' },
-    ],
-  },
-  {
-    name: 'Welcome',
-    commands: [
-      { name: 'greet' },
-      { name: 'goodbye' },
-    ],
-  },
+const categories = [
+  { name: "Information", commands: ["Help", "User"] },
+  { name: "Economy", commands: ["Servers", "Members"] },
+  { name: "Utility", commands: ["Ping", "Weather"] },
+  { name: "Antinuke", commands: ["Ban", "Kick"] },
+  { name: "Ticket", commands: ["New", "Close"] },
+  { name: "Welcome", commands: ["Set", "Clear"] }
 ];
 
-export default function CommandPage() {
-  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
+export default function Commands() {
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  const handleClick = (index) => {
-    setSelectedCategoryIndex(index);
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        {categories.map((category, index) => (
-          <button key={index} onClick={() => handleClick(index)} style={{ margin: '5px' }}>
+      <div className="categories">
+        {categories.slice(0, 3).map((category) => (
+          <button
+            key={category.name}
+            onClick={() => handleCategoryClick(category)}
+            className={
+              selectedCategory.name === category.name ? "active" : ""
+            }
+          >
             {category.name}
           </button>
         ))}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        {categories[selectedCategoryIndex].commands.map((command, index) => (
-          <button key={index} style={{ margin: '5px' }}>
-            {command.name}
+      <div className="categories">
+        {categories.slice(3).map((category) => (
+          <button
+            key={category.name}
+            onClick={() => handleCategoryClick(category)}
+            className={
+              selectedCategory.name === category.name ? "active" : ""
+            }
+          >
+            {category.name}
           </button>
         ))}
       </div>
-      <table style={{ margin: 'auto', marginTop: '20px', borderCollapse: 'collapse' }}>
+      <table>
         <thead>
           <tr>
-            <th>Category Name</th>
+            <th>{selectedCategory.name}</th>
           </tr>
         </thead>
         <tbody>
-          {categories.map((category, index) => (
-            <tr key={index}>
-              <td>{category.name}</td>
-              {category.commands.map((command, index) => (
-                <td key={index}>{command.name}</td>
-              ))}
+          {selectedCategory.commands.map((command) => (
+            <tr key={command}>
+              <td>{command}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      <style jsx>{`
+        .categories {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+        button {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: none;
+          background-color: transparent;
+          color: #333;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .active {
+          color: #0070f3;
+          border-bottom: 2px solid #0070f3;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+        th,
+        td {
+          text-align: left;
+          padding: 8px;
+        }
+        th {
+          font-weight: bold;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      `}</style>
     </div>
   );
 }
