@@ -1,4 +1,3 @@
-In this code in table add animated RGB border
 import { useState } from 'react';
 
 const categories = [
