@@ -42,26 +42,27 @@ const categories = [
   }
 ];
 
+
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [buttonColor, setButtonColor] = useState("bg-blue-500");
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setButtonColor("bg-blue-500");
   }
 
-  const buttonStyle = (color) => {
-    return `rounded-md py-2 px-4 font-medium hover:opacity-80 transition duration-200 text-white ${color}`
+  const [buttonBgColor, setButtonBgColor] = useState('gray-300');
+  
+  const handleButtonClick = () => {
+    setButtonBgColor('blue-600');
   }
 
   return (
     <div className="container mx-auto mt-10">
       <div className="flex flex-wrap">
         {categories.map((category) => (
-          <div key={category.name} className="w-full md:w-1/3 px-2 mb-4">
+          <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <button
-              className={buttonStyle(selectedCategory.name === category.name ? buttonColor : "bg-gray-300")}
+              className={`w-full shadow-lg shadow-amber-600/20 rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : buttonBgColor}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
@@ -80,6 +81,13 @@ export default function Commands() {
           </div>
         ))}
       </div>
+      
+      <button
+        className={`bg-${buttonBgColor} hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+        onClick={handleButtonClick}
+      >
+        Change button color
+      </button>
     </div>
   );
 }
