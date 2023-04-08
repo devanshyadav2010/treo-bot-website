@@ -1,18 +1,6 @@
 import { useState } from 'react';
 
-const categories = [
-  {
-    name: "Information",
-    commands: [
-      {
-        name: "Help",
-        description: "Get help with using the bot."
-      },
-      {
-        name: "User",
-        description: "Get information about a user."
-      }
-    ]
+const categories = [  {    name: "Information",    commands: [      {        name: "Help",        description: "Get help with using the bot."      },      {        name: "User",        description: "Get information about a user."      }    ]
   },
   {
     name: "Economy",
@@ -94,7 +82,7 @@ export default function Commands() {
         {categories.map((category) => (
           <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <button
-              className={`w-full shadow-lg shadow-amber-600/20 rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full shadow-lg rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
@@ -106,9 +94,28 @@ export default function Commands() {
       <div className="flex flex-wrap mt-10">
         {selectedCategory.commands.map((command) => (
           <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <div className="border-2 border-red-400 border-opacity-0 hover:border-opacity-100 rounded-lg p-4 h-full animate-pulse">
-              <div className="font-medium mb-2">{command.name}</div>
-              <div className="text-gray-500">{command.description}</div>
+            <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
+              <div className="bg-white p-4">
+                <div className="font-medium mb-2">{command.name}</div>
+                <div className="text-gray-500">{command.description}</div>
+              </div>
+              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
+            </div>
+</div>
+        ))}
+      </div>
+      
+      <div className="flex flex-wrap mt-10">
+        {selectedCategory.commands.map((command) => (
+          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="border border-gray-200 rounded-lg overflow-hidden">
+              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
+              <div className="bg-white p-4">
+                <div className="font-medium mb-2">{command.name}</div>
+                <div className="text-gray-500">{command.description}</div>
+              </div>
+              <div className="flex items-center justify-center bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 h-3 animate-pulse"></div>
             </div>
           </div>
         ))}
@@ -116,3 +123,4 @@ export default function Commands() {
     </div>
   );
 }
+
