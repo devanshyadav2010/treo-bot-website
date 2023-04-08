@@ -5,6 +5,7 @@ import categories from '../data/categories';
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchText, setSearchText] = useState('');
+  const [searchBarSize, setSearchBarSize] = useState(10);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -12,6 +13,14 @@ export default function Commands() {
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
+  };
+
+  const handleSearchBarFocus = () => {
+    setSearchBarSize(20);
+  };
+
+  const handleSearchBarBlur = () => {
+    setSearchBarSize(10);
   };
 
   const filteredCommands = selectedCategory.commands.filter((command) =>
@@ -30,6 +39,9 @@ export default function Commands() {
               id="search"
               value={searchText}
               onChange={handleSearchTextChange}
+              onFocus={handleSearchBarFocus}
+              onBlur={handleSearchBarBlur}
+              style={{ fontSize: searchBarSize }}
               className="focus:ring-amber-500 focus:border-amber-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
               placeholder="Search commands"
             />
