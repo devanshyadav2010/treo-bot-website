@@ -49,16 +49,55 @@ export default function Commands() {
         ))}
       </div>
       
-      <div className="flex flex-wrap mt-10">
-        {selectedCategory.commands.map((command) => (
-          <div key={command} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-            <div className="border border-gray-200 rounded-lg p-4 h-full">
-              <div className="font-medium mb-2">{command}</div>
-              <div className="text-gray-500">Command description goes here.</div>
+      <div className="table w-full mt-10">
+        <div className="table-row font-medium">
+          {selectedCategory.commands.map((command) => (
+            <div key={command} className="table-cell p-4 border-b-2 border-gray-200">
+              {command}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="table-row">
+          {selectedCategory.commands.map((command) => (
+            <div key={command} className="table-cell p-4 border-b border-gray-200">
+              Command description goes here.
+            </div>
+          ))}
+        </div>
       </div>
+
+      <style jsx>{`
+        .table {
+          display: table;
+          width: 100%;
+        }
+        .table-row {
+          display: table-row;
+        }
+        .table-cell {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          border-collapse: collapse;
+        }
+        @media screen and (max-width: 768px) {
+          .flex-wrap {
+            flex-wrap: wrap;
+          }
+          .table-row {
+            display: block;
+          }
+          .table-cell {
+            display: block;
+            padding: 1rem;
+            border: none;
+            border-bottom: 1px solid #e2e8f0;
+          }
+          .table-cell:first-child {
+            border-top: 1px solid #e2e8f0;
+          }
+        }
+      `}</style>
     </div>
   );
 }
