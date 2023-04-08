@@ -39,62 +39,29 @@ const categories = [
         description: "Create a poll for members to vote on."
       }
     ]
-  },
-  {
-    name: "Antinuke",
-    commands: [
-      {
-        name: "Ban",
-        description: "Ban a user from a server."
-      },
-      {
-        name: "Kick",
-        description: "Kick a user from a server."
-      }
-    ]
-  },
-  {
-    name: "Ticket",
-    commands: [
-      {
-        name: "Open",
-        description: "Open a support ticket."
-      },
-      {
-        name: "Close",
-        description: "Close a support ticket."
-      }
-    ]
-  },
-  {
-    name: "Welcome",
-    commands: [
-      {
-        name: "Set",
-        description: "Set the welcome message for a server."
-      },
-      {
-        name: "Reset",
-        description: "Reset the welcome message for a server."
-      }
-    ]
   }
 ];
 
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [buttonColor, setButtonColor] = useState("bg-blue-500");
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setButtonColor("bg-blue-500");
+  }
+
+  const buttonStyle = (color) => {
+    return `rounded-md py-2 px-4 font-medium hover:opacity-80 transition duration-200 text-white ${color}`
   }
 
   return (
     <div className="container mx-auto mt-10">
       <div className="flex flex-wrap">
         {categories.map((category) => (
-          <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+          <div key={category.name} className="w-full md:w-1/3 px-2 mb-4">
             <button
-              className={`w-full shadow-lg shadow-amber-600/20 rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={buttonStyle(selectedCategory.name === category.name ? buttonColor : "bg-gray-300")}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
