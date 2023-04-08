@@ -1,12 +1,30 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const categories = [
-  { name: "Information", commands: ["Help", "User"] },
-  { name: "Economy", commands: ["Servers", "Members"] },
-  { name: "Utility", commands: ["Ping", "Weather"] },
-  { name: "Antinuke", commands: ["Ban", "Kick"] },
-  { name: "Ticket", commands: ["New", "Close"] },
-  { name: "Welcome", commands: ["Set", "Clear"] }
+  {
+    name: "Information",
+    commands: ["Help", "User"]
+  },
+  {
+    name: "Economy",
+    commands: ["Servers", "Members"]
+  },
+  {
+    name: "Utility",
+    commands: ["Ping", "Poll"]
+  },
+  {
+    name: "Antinuke",
+    commands: ["Ban", "Kick"]
+  },
+  {
+    name: "Ticket",
+    commands: ["Open", "Close"]
+  },
+  {
+    name: "Welcome",
+    commands: ["Set", "Reset"]
+  }
 ];
 
 export default function Commands() {
@@ -14,87 +32,33 @@ export default function Commands() {
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-  };
+  }
 
   return (
-    <div>
-      <div className="categories">
-        {categories.slice(0, 3).map((category) => (
-          <button
-            key={category.name}
-            onClick={() => handleCategoryClick(category)}
-            className={
-              selectedCategory.name === category.name ? "active" : ""
-            }
-          >
-            {category.name}
-          </button>
+    <div className="container mx-auto mt-10">
+      <div className="flex flex-wrap">
+        {categories.map((category) => (
+          <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <button
+              className={`w-full shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category.name}
+            </button>
+          </div>
         ))}
       </div>
-      <div className="categories">
-        {categories.slice(3).map((category) => (
-          <button
-            key={category.name}
-            onClick={() => handleCategoryClick(category)}
-            className={
-              selectedCategory.name === category.name ? "active" : ""
-            }
-          >
-            {category.name}
-          </button>
+      
+      <div className="flex flex-wrap mt-10">
+        {selectedCategory.commands.map((command) => (
+          <div key={command} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="border border-gray-200 rounded-lg p-4 h-full">
+              <div className="font-medium mb-2">{command}</div>
+              <div className="text-gray-500">Command description goes here.</div>
+            </div>
+          </div>
         ))}
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>{selectedCategory.name}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {selectedCategory.commands.map((command) => (
-            <tr key={command}>
-              <td>{command}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <style jsx>{`
-        .categories {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 10px;
-        }
-        button {
-          margin-right: 10px;
-          padding: 5px 10px;
-          border: none;
-          background-color: transparent;
-          color: #333;
-          font-size: 16px;
-          cursor: pointer;
-        }
-        .active {
-          color: #0070f3;
-          border-bottom: 2px solid #0070f3;
-        }
-        table {
-          border-collapse: collapse;
-          width: 100%;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-        th,
-        td {
-          text-align: left;
-          padding: 8px;
-        }
-        th {
-          font-weight: bold;
-        }
-        tr:nth-child(even) {
-          background-color: #f2f2f2;
-        }
-      `}</style>
     </div>
   );
 }
