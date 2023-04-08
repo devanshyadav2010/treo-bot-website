@@ -3,27 +3,81 @@ import { useState } from 'react';
 const categories = [
   {
     name: "Information",
-    commands: ["Help", "User"]
+    commands: [
+      {
+        name: "Help",
+        description: "Get help with using the bot."
+      },
+      {
+        name: "User",
+        description: "Get information about a user."
+      }
+    ]
   },
   {
     name: "Economy",
-    commands: ["Servers", "Members"]
+    commands: [
+      {
+        name: "Servers",
+        description: "Get information about the servers the bot is in."
+      },
+      {
+        name: "Members",
+        description: "Get information about the members in a server."
+      }
+    ]
   },
   {
     name: "Utility",
-    commands: ["Ping", "Poll"]
+    commands: [
+      {
+        name: "Ping",
+        description: "Get the latency of the bot."
+      },
+      {
+        name: "Poll",
+        description: "Create a poll for members to vote on."
+      }
+    ]
   },
   {
     name: "Antinuke",
-    commands: ["Ban", "Kick"]
+    commands: [
+      {
+        name: "Ban",
+        description: "Ban a user from a server."
+      },
+      {
+        name: "Kick",
+        description: "Kick a user from a server."
+      }
+    ]
   },
   {
     name: "Ticket",
-    commands: ["Open", "Close"]
+    commands: [
+      {
+        name: "Open",
+        description: "Open a support ticket."
+      },
+      {
+        name: "Close",
+        description: "Close a support ticket."
+      }
+    ]
   },
   {
     name: "Welcome",
-    commands: ["Set", "Reset"]
+    commands: [
+      {
+        name: "Set",
+        description: "Set the welcome message for a server."
+      },
+      {
+        name: "Reset",
+        description: "Reset the welcome message for a server."
+      }
+    ]
   }
 ];
 
@@ -40,7 +94,7 @@ export default function Commands() {
         {categories.map((category) => (
           <div key={category.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <button
-              className={`w-full shadow-lg shadow-amber-600/20 rounded-xl py-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full shadow-lg shadow-amber-600/20 rounded-md py-2 px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
@@ -49,55 +103,16 @@ export default function Commands() {
         ))}
       </div>
       
-      <div className="table w-full mt-10">
-        <div className="table-row font-medium">
-          {selectedCategory.commands.map((command) => (
-            <div key={command} className="table-cell p-4 border-b-2 border-gray-200">
-              {command}
+      <div className="flex flex-wrap mt-10">
+        {selectedCategory.commands.map((command) => (
+          <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+            <div className="bg-white border border-gray-200 rounded-lg p-4 h-full">
+              <div className="font-medium mb-2">{command.name}</div>
+              <div className="text-gray-500">{command.description}</div>
             </div>
-          ))}
-        </div>
-        <div className="table-row">
-          {selectedCategory.commands.map((command) => (
-            <div key={command} className="table-cell p-4 border-b border-gray-200">
-              Command description goes here.
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-      <style jsx>{`
-        .table {
-          display: table;
-          width: 100%;
-        }
-        .table-row {
-          display: table-row;
-        }
-        .table-cell {
-          display: table-cell;
-          vertical-align: middle;
-          text-align: center;
-          border-collapse: collapse;
-        }
-        @media screen and (max-width: 768px) {
-          .flex-wrap {
-            flex-wrap: wrap;
-          }
-          .table-row {
-            display: block;
-          }
-          .table-cell {
-            display: block;
-            padding: 1rem;
-            border: none;
-            border-bottom: 1px solid #e2e8f0;
-          }
-          .table-cell:first-child {
-            border-top: 1px solid #e2e8f0;
-          }
-        }
-      `}</style>
     </div>
   );
 }
