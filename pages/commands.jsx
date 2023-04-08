@@ -103,7 +103,8 @@ export default function Commands() {
         ))}
       </div>
       
-      <div className="flex flex-wrap mt-10">
+      <div className="flex flex-wrap mt-10 relative">
+        <div className="absolute top-0 left-0 w-full h-full border-red-500 border-4 border-solid rounded-lg z-10 animate-border-red"></div>
         {selectedCategory.commands.map((command) => (
           <div key={command.name} className="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
             <div className="bg-white border border-gray-200 rounded-lg p-4 h-full">
