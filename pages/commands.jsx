@@ -84,7 +84,7 @@ export default function Commands() {
               <p className="text-gray-600 mt-4">{selectedCommand.description}</p>
             </div>
           </div>
-        </div>
+       
       )}
     </div>
   );
