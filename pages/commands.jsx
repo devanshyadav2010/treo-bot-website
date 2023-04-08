@@ -92,9 +92,9 @@ export default function Commands() {
     <div className="container mx-auto mt-10">
       <div className="flex flex-wrap flex-col md:flex-row md:-mx-2">
         {categories.map((category) => (
-          <div key={category.name} className="w-full md:w-1/3 px-2 mb-4">
+          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
             <button
-              className={`w-full h-10 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full md:w-auto h-10 md:h-12 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 md:px-4 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
