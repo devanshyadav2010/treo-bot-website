@@ -39,11 +39,11 @@ export default function Commands() {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap flex-row">
+      <div className="flex flex-wrap flex-col md:flex-row">
         {categories.map((category) => (
-          <div key={category.name} className="w-1/2 sm:w-1/3 lg:w-1/6 md:px-2 mb-4">
+          <div key={category.name} className="md:w-1/3 md:px-2 mb-4">
             <button
-              className={`w-full h-10 shadow-lg shadow-amber-600/20 rounded-md py-2 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
+              className={`w-full md:w-auto h-8 shadow-md rounded-md py-1 px-2 font-medium bg-gradient-to-bl from-amber-700 to-amber-500 hover:opacity-80 transition duration-200 text-white ${selectedCategory.name === category.name ? 'bg-amber-600' : ''}`}
               onClick={() => handleCategoryClick(category)}
             >
               {category.name}
