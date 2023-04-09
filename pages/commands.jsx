@@ -70,6 +70,7 @@ export default function Commands() {
   {command.name}
 </button>
 
+
               >
                 See Details
               </button>
