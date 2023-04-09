@@ -7,16 +7,6 @@ const categories = [  {    name: "All",    commands: [      {        name: "help
         name: "Soon",
         description: "Soon",
         usage: "Soon"
-      },
-      {
-        name: "Soon",
-        description: "Soon",
-        usage: "Soon"
-      },
-      {
-        name: "Soon",
-        description: "Soon",
-        usage: "Soon"
       }
     ]
   },
@@ -27,12 +17,52 @@ const categories = [  {    name: "All",    commands: [      {        name: "help
         name: "Soon",
         description: "Soon",
         usage: "Soon"
-      },
+      }
+    ]
+  },
+  {
+    name: "Utility",
+    commands: [
       {
         name: "Soon",
         description: "Soon",
         usage: "Soon"
-      },
+      }
+    ]
+  },
+  {
+    name: "Ticket",
+    commands: [
+      {
+        name: "Soon",
+        description: "Soon",
+        usage: "Soon"
+      }
+    ]
+  },
+  {
+    name: "Music",
+    commands: [
+      {
+        name: "Soon",
+        description: "Soon",
+        usage: "Soon"
+      }
+    ]
+  },
+  {
+    name: "Utility",
+    commands: [
+      {
+        name: "Soon",
+        description: "Soon",
+        usage: "Soon"
+      }
+    ]
+  },
+  {
+    name: "Premium",
+    commands: [
       {
         name: "Soon",
         description: "Soon",
