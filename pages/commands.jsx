@@ -1,4 +1,3 @@
-I want that card as response of button in this code
 import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import categories from '../data/categories';
