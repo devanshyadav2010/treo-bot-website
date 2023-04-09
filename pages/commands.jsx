@@ -66,9 +66,10 @@ export default function Commands() {
               <h2 className="text-lg font-bold mb-2 cursor
 </h2>
               <p className="text-gray-700 mb-4">{command.description}</p>
-              <button
-                className="bg-amber-500 hover:bg-amber-600 text-white font-medium py-1 px-2 rounded-md transition duration-200"
-                onClick={() => handleCommandClick(command)}
+              <button className={`text-lg font-bold ${selectedCommand === command ? 'text-amber-500' : 'text-gray-900'} mb-2`} onClick={() => handleCommandClick(command)}>
+  {command.name}
+</button>
+
               >
                 See Details
               </button>
