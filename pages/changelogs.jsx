@@ -7,7 +7,7 @@ export default function Changelogs() {
 
   // read the changelog file on page load
   useEffect(() => {
-    const changelogData = fs.readFileSync('./changelog.json', 'utf-8');
+    const changelogData = fs.readFileSync('../data/changelogs.json', 'utf-8');
     setChangelogs(JSON.parse(changelogData));
   }, []);
 
