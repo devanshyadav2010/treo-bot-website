@@ -135,6 +135,57 @@ const categories = [
     ]
   },
   {
+  name: "Info",
+  commands: [
+    {
+      name: "help",
+      description: "Displays a list of all available commands.",
+      usage: ""
+    },
+    {
+      name: "serverinfo",
+      description: "Displays information about the server.",
+      usage: ""
+    },
+    {
+      name: "userinfo",
+      description: "Displays information about a user.",
+      usage: ""
+    },
+    {
+      name: "useravatar",
+      description: "Displays the avatar of a user.",
+      usage: ""
+    },
+    {
+      name: "userbanner",
+      description: "Displays the banner of a user (if they have one).",
+      usage: ""
+    },
+    {
+      name: "servericon",
+      description: "Displays the icon of the server.",
+      usage: ""
+    },
+    {
+      name: "serverbanner",
+      description: "Displays the banner of the server (if it has one).",
+      usage: ""
+    },
+    {
+      name: "userroles",
+      description: "Displays the roles of a user.",
+      usage: ""
+    },
+    {
+      name: "serveroldestmember",
+      description: "Displays the oldest member in the server.",
+      usage: ""
+    }
+  ]
+},
+
+  {
     name: "Moderation",
     commands: [
       {
