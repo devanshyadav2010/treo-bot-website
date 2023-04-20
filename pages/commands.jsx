@@ -3,7 +3,6 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import categories from '../data/categories';
 import Modal from 'react-modal';
 
-
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchText, setSearchText] = useState('');
@@ -75,18 +74,20 @@ export default function Commands() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="max-w-3xl w-full mx-4 my-6 bg-white shadow-md rounded-md p-8">
             <h2 className="text-2xl font-bold mb-4">{selectedCommand.name}</h2>
-            <p className="text-gray-600">{selectedCommand.description}</p>
-
-<button className="absolute right-4 top-4 text-gray-400 hover:text-gray-800 transition duration-200" onClick={() => setSelectedCommand(null)}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 1C5.038 1 1 5.037 1 10s4.038 9 9 9 9-4.037 9-9-4.038-9-9-9zm4.243 13.536a.75.75 0 01-1.06 1.061L10 11.06l-3.182 3.536a.75.75 0 11-1.06-1.06L8.938 10 5.757 6.464a.75.75 0 111.06-1.06L10 8.94l3.182-3.536a.75.75 0 111.06 1.06L11.062 10l3.182 3.536z" clipRule="evenodd" />
-                </svg>
+            <p className="text-gray-600 mb-4">{selectedCommand.description}</p>
+            <div className="flex justify-end">
+              <button
+                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-200"
+                onClick={() => setSelectedCommand(null)}
+              >
+                Close
               </button>
-              <p className="text-gray-600 mt-4">{selectedCommand.description}</p>
             </div>
           </div>
-       
+        </div>
       )}
-    </div>
-  );
+bash
+Copy code
+</div>
+);
 }
