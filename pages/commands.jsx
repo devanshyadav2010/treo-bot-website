@@ -3,31 +3,27 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import categories from '../data/categories';
 import Modal from 'react-modal';
 
+
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchText, setSearchText] = useState('');
-  const [selectedCommand, setSelectedCommand] = useState(null);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
-    setSelectedCommand(null);
   };
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
-    setSelectedCommand(null);
   };
 
   const filteredCommands = selectedCategory.commands.filter((command) =>
     command.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
+  const [selectedCommand, setSelectedCommand] = useState(null);
+
   const handleCommandClick = (command) => {
     setSelectedCommand(command);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedCommand(null);
   };
 
   return (
@@ -74,30 +70,23 @@ export default function Commands() {
           </div>
         ))}
       </div>
-<Modal isOpen={selectedCommand !== null} onRequestClose={handleCloseModal} className="modal">
-  <div className="flex justify-between items-center mb-4">
-    {selectedCommand && (
-      <>
-        <h2 className="text-2xl font-bold text-gray-900">{selectedCommand.name}</h2>
-        <button onClick={handleCloseModal} className="text-gray-500 hover:text-gray-700 focus:outline-none">
-          <span className="sr-only">Close</span>
-          <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </>
-    )}
-  </div>
-          {selectedCommand && (
-            <div className="mt-4">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Usage:</h3>
-              <p className="text-gray-600">{selectedCommand.usage}</p>
-              <h3 className="text-lg font-bold text-gray-900 mt-4 mb-2">Description:</h3>
-              <p className="text-gray-600">{selectedCommand.description}</p>
+
+      {selectedCommand && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="max-w-3xl w-full mx-4 my-6 bg-white shadow-md rounded-md p-8">
+            <h2 className="text-2xl font-bold mb-4">{selectedCommand.name}</h2>
+            <p className="text-gray-600">{selectedCommand.description}</p>
+
+<button className="absolute right-4 top-4 text-gray-400 hover:text-gray-800 transition duration-200" onClick={() => setSelectedCommand(null)}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 1C5.038 1 1 5.037 1 10s4.038 9 9 9 9-4.037 9-9-4.038-9-9-9zm4.243 13.536a.75.75 0 01-1.06 1.061L10 11.06l-3.182 3.536a.75.75 0 11-1.06-1.06L8.938 10 5.757 6.464a.75.75 0 111.06-1.06L10 8.94l3.182-3.536a.75.75 0 111.06 1.06L11.062 10l3.182 3.536z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <p className="text-gray-600 mt-4">{selectedCommand.description}</p>
             </div>
-          )}
-        </div>
-      </Modal>
+          </div>
+       
+      )}
     </div>
   );
 }
