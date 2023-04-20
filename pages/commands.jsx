@@ -6,23 +6,28 @@ import Modal from 'react-modal';
 export default function Commands() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchText, setSearchText] = useState('');
+  const [selectedCommand, setSelectedCommand] = useState(null);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
+    setSelectedCommand(null);
   };
 
   const handleSearchTextChange = (event) => {
     setSearchText(event.target.value);
+    setSelectedCommand(null);
   };
 
   const filteredCommands = selectedCategory.commands.filter((command) =>
     command.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
-  const [selectedCommand, setSelectedCommand] = useState(null);
-
   const handleCommandClick = (command) => {
     setSelectedCommand(command);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedCommand(null);
   };
 
   return (
@@ -70,24 +75,31 @@ export default function Commands() {
         ))}
       </div>
 
-      {selectedCommand && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="max-w-3xl w-full mx-4 my-6 bg-white shadow-md rounded-md p-8">
-            <h2 className="text-2xl font-bold mb-4">{selectedCommand.name}</h2>
-            <p className="text-gray-600 mb-4">{selectedCommand.description}</p>
-            <div className="flex justify-end">
-              <button
-                className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition duration-200"
-                onClick={() => setSelectedCommand(null)}
-              >
-                Close
+      <Modal isOpen={selectedCommand !== null} onRequestClose={handleCloseModal} className="modal">
+        <div className="flex justify-between items-center mb-4">
+          <h2 
+
+          {selectedCommand && (
+            <>
+              <h2 className="text-2xl font-bold text-gray-900">{selectedCommand.name}</h2>
+              <button onClick={handleCloseModal} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+                <span className="sr-only">Close</span>
+                <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
+            </>
+          )}
+          {selectedCommand && (
+            <div className="mt-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Usage:</h3>
+              <p className="text-gray-600">{selectedCommand.usage}</p>
+              <h3 className="text-lg font-bold text-gray-900 mt-4 mb-2">Description:</h3>
+              <p className="text-gray-600">{selectedCommand.description}</p>
             </div>
-          </div>
+          )}
         </div>
-      )}
-bash
-Copy code
-</div>
-);
+      </Modal>
+    </div>
+  );
 }
