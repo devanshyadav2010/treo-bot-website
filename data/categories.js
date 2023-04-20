@@ -1,12 +1,136 @@
-const categories = [  {    name: "All",    commands: [      {        name: "help",        description: "Displays a list of all available commands.",        usage: "/help"      },      {        name: "ping",        description: "Checks the bot's latency.",        usage: "!ping"      },      {        name: "info",        description: "Displays some information about the bot.",        usage: "!info"      }    ]
+const categories = [  
+  {
+    name: "Economy",
+    commands: [
+      {
+        name: "Balance",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Beg",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Yearly",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Daily",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Weekly",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Dig",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Deposit",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Economy Search",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Withdraw",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Hunt",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Fish",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Balance",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Chopwood",
+        description: "",
+        usage: ""
+      }
+    ]
   },
   {
-    name: "Antinuke",
+    name: "Fun",
+    commands: [
+      {
+        name: "Anime",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Clever Rate",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Gif",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Hack",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Image",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Nitro",
+        description: "",
+        usage: ""
+      }
+    ]
+  },
+  {
+    name: "Games",
+    commands: [
+      {
+        name: "Connect4",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Tic Tac Toe",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Rock Paper Scissors",
+        description: "",
+        usage: ""
+      }
+    ]
+  },
+  {
+    name: "Giveaway",
     commands: [
       {
         name: "Soon",
-        description: "Soon",
-        usage: "Soon"
+        description: "",
+        usage: ""
       }
     ]
   },
@@ -14,19 +138,49 @@ const categories = [  {    name: "All",    commands: [      {        name: "help
     name: "Moderation",
     commands: [
       {
-        name: "Soon",
-        description: "Soon",
-        usage: "Soon"
-      }
-    ]
-  },
-  {
-    name: "Utility",
-    commands: [
+        name: "Kick",
+        description: "",
+        usage: ""
+      },
       {
-        name: "Soon",
-        description: "Soon",
-        usage: "Soon"
+        name: "Ban",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Timeout",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Nuke",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Slow",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Unslow",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Unban",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Untimeout",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Unlock",
+        description: "",
+        usage: ""
       }
     ]
   },
@@ -35,17 +189,7 @@ const categories = [  {    name: "All",    commands: [      {        name: "help
     commands: [
       {
         name: "Soon",
-        description: "Soon",
-        usage: "Soon"
-      }
-    ]
-  },
-  {
-    name: "Music",
-    commands: [
-      {
-        name: "Soon",
-        description: "Soon",
+        description: "",
         usage: "Soon"
       }
     ]
@@ -54,18 +198,68 @@ const categories = [  {    name: "All",    commands: [      {        name: "help
     name: "Utility",
     commands: [
       {
-        name: "Soon",
-        description: "Soon",
-        usage: "Soon"
+        name: "Autorole",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Calculator",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Embed",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Poll",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Say",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Screenshot",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Sort",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Sticky Embed",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Sticky Messages",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Thanks",
+        description: "",
+        usage: ""
+      },
+      {
+        name: "Translate",
+        description: "",
+        usage: ""
       }
     ]
   },
   {
-    name: "Premium",
+    name: "Welcome",
     commands: [
       {
         name: "Soon",
-        description: "Soon",
+        description: "",
         usage: "Soon"
       }
     ]
