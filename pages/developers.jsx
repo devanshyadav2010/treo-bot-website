@@ -13,45 +13,33 @@ export default function Developers() {
                 </h1>
             </div>
 
-            <div className="lg:max-w-screen-lg mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+             <div className="lg:max-w-screen-lg mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
 
             <div className="flex flex-col justify-center text-white rounded">
             <a href="https://dev-ansh.tech">
                         <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
                             <img className="rounded-full h-32 w-32" src="https://i.imgur.com/4zM9Oni.jpg" />
                             <div>
-                                <h1 className="leading-none text-3xl font-bold text-white">Hi I'm Devansh,</h1>        
+                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Devansh</h1>        
                                 <div className="flex items-center mt-1">
                                     <p className="font-normal font-sm">
-                                        I'm the developer and founder of treo. I know javascript, html, css. Click here to know about me
+                                       I'm the developer and founder of treo. I know javascript, html, css. Click here to know about me
                                     </p>
                                 </div>     
-        <div className="flex flex-col justify-center text-white rounded">
-            <a href="https://dev-ansh.tech">
-                        <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
-                            <img className="rounded-full h-32 w-32" src="https://i.imgur.com/HQ2rOM8.png" />
-                            <div>
-                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby,</h1>        
-                                <div className="flex items-center mt-1">
-                                    <p className="font-normal font-sm">
-                                        I'm an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and 6 months of experience with HTML and CSS, I have honed my skills to become a master of my craft. As the owner of Sparky, I am constantly pushing the boundaries of what is possible and striving to deliver the best possible results of other users.
-                                    </p>
-                                </div>     
-            
-         
                             </div>
                         </div>
                     </a>
                     </div>
-       <div className="flex flex-col justify-center text-white rounded">
+
+                    <div className="flex flex-col justify-center text-white rounded">
                         <a href="https://discord.gg/JaNCZvPxMQ">
                             <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
-                            <img className="rounded-full h-32 w-32" src="https://i.imgur.com/HQ2rOM8.png" />
+                            <img className="rounded-full h-32 w-32" src="https://imgur.io/HQ2rOM8" />
                             <div>
-                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby,</h1>        
+                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby</h1>        
                                 <div className="flex items-center mt-1">
                                     <p className="font-normal font-sm">
-                                    I'm an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and 6 months of experience with HTML and CSS, I have honed my skills to become a master of my craft. As the owner of Sparky, I am constantly pushing the boundaries of what is possible and striving to deliver the best possible results of other users.
+                                    None!Heyo! I'm Toby, an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and 6 months of experience with HTML and CSS, I have honed my skills to become a master of my craft. As the owner of Sparky, I am constantly pushing the boundaries of what is possible and striving to deliver the best possible results of other users.
                                     </p>
                                 </div>     
                             </div>
