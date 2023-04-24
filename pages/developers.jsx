@@ -20,7 +20,7 @@ export default function Developers() {
                         <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
                             <img className="rounded-full h-32 w-32" src="https://i.imgur.com/4zM9Oni.jpg" />
                             <div>
-                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Devansh</h1>        
+                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Devansh,</h1>        
                                 <div className="flex items-center mt-1">
                                     <p className="font-normal font-sm">
                                        I'm the developer and founder of treo. I know javascript, html, css. Click here to know about me
@@ -36,10 +36,10 @@ export default function Developers() {
                             <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
                             <img className="rounded-full h-32 w-32" src="https://i.imgur.com/HQ2rOM8.png" />
                             <div>
-                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby</h1>        
+                                <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby,</h1>        
                                 <div className="flex items-center mt-1">
                                     <p className="font-normal font-sm">
-                                    None!Heyo! I'm Toby, an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and HTML CSS.
+                                    Hi, I'm the Developer of Treo . With 3 years of experience developing with discord.js and HTML CSS.
                                     </p>
                                 </div>     
                             </div>
