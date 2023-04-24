@@ -18,7 +18,7 @@ export default function Developers() {
             <div className="flex flex-col justify-center text-white rounded">
             <a href="https://dev-ansh.tech">
                         <div className="flex-1 gap-x-4 flex items-center bg-gradient-to-b from-neutral-900/80 to-neutral-900/20 p-3 rounded-full">
-                            <img className="rounded-full h-32 w-32" src="/img/devansh.jpeg" />
+                            <img className="rounded-full h-32 w-32" src="https://i.imgur.com/4zM9Oni.jpg" />
                             <div>
                                 <h1 className="leading-none text-3xl font-bold text-white">Hi I'm Devansh,</h1>        
                                 <div className="flex items-center mt-1">
