@@ -39,7 +39,7 @@ export default function Developers() {
                                 <h1 className="leading-none text-3xl font-bold text-white">Heyo! I'm Toby</h1>        
                                 <div className="flex items-center mt-1">
                                     <p className="font-normal font-sm">
-                                    None!Heyo! I'm Toby, an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and 6 months of experience with HTML and CSS, I have honed my skills to become a master of my craft. As the owner of Sparky, I am constantly pushing the boundaries of what is possible and striving to deliver the best possible results of other users.
+                                    None!Heyo! I'm Toby, an advanced developer with a passion for creating innovative and engaging experiences. With 3 years of experience developing with discord.js and HTML CSS.
                                     </p>
                                 </div>     
                             </div>
