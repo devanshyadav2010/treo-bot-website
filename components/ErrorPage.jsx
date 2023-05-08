@@ -8,7 +8,7 @@ const ErrorPage = ({ code, message }) => {
     
     return <>
         <Head>
-            <title>{code} | Treo Bot</title>
+            <title>{code} | Apexa</title>
         </Head>
 
         <div className="max-w-7xl text-center py-20 mx-auto">
