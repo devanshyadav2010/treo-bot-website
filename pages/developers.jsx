@@ -1,5 +1,5 @@
+import { FaStar } from 'react-icons/fa';
 
-import { FaStars } from 'react-icons/fa';
 
 export default function Developers() {
   return (
