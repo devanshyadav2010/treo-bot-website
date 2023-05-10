@@ -1,6 +1,3 @@
-import { FaStar } from 'react-icons/fa';
-
-
 export default function Developers() {
   return (
     <div className="container mx-auto mt-10">
@@ -8,7 +5,7 @@ export default function Developers() {
         <img className="w-64" src="/img/bck4.png" alt="Background" />
       </div>
       <h1 className="py-7 text-4xl font-extrabold text-center text-white">
-        <FaStars className="text-amber-400 mr-2 text-6xl inline-block" />
+        <span className="text-amber-400 mr-2">★</span>
         Developers
       </h1>
 
