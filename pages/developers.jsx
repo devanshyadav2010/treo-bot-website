@@ -14,7 +14,7 @@ export default function Developers() {
           <img src="https://discord.c99.nl/widget/theme-2/980069165459198022.png" alt="Discord Widget" />
         </div>
         <div className="flex justify-center">
-          <img src="https://discord.c99.nl/widget/theme-2/980069165459198022.png" alt="Discord Widget" />
+          <img src="https://discord.c99.nl/widget/theme-2/903237169722834954.png" alt="Discord Widget" />
         </div>
 
       </div>
