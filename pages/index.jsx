@@ -56,7 +56,7 @@ Vote Treo</a>
            
               <div>
                 <div className="text-white">
-                  <p className="text-xl font-semibold mt-5"><i className={`fa fa-cogs text-2xl text-amber-500`} /> Alok</p>
+                  <p className="text-xl font-semibold mt-5"><i className={`fa fa-cogs text-2xl text-amber-500`} /> Optimisation</p>
                   <p className="text-gray-500 line-clamp-4">With fast and customizable settings specific to your server, A gives you a musical pleasure to the fullest.</p>
                 </div>
               </div>
