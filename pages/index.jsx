@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import Head from 'next/head';
 export default function Index() {
 	
   return (
     <>
+	    <Head>
+		    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="7a304ca3-7233-4d40-9f72-4b86192c2b72";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+	    </Head>
       <div className="py-20 mb-30 max-w-3xl mx-auto">
         <div className="flex w-full justify-center">
       <img width="500" src="/img/bck.png" />
